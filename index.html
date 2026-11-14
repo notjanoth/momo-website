@@ -41,7 +41,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 h1, h2, h3, p, ul { margin: 0; padding: 0; }
 ul { list-style: none; }
 a { color: inherit; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
 section[id] { scroll-margin-top: 84px; }
 .wrap { max-width: 1200px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
@@ -62,7 +62,7 @@ section[id] { scroll-margin-top: 84px; }
 .logo { display: grid; place-items: center; background: var(--purple); color: #fff; padding: 12px 20px; line-height: 0; }
 .logo svg { width: 118px; height: 22px; }
 .bar nav { display: flex; gap: clamp(14px, 4vw, 56px); font: 800 1.125rem/1 var(--body); }
-.bar nav a { text-decoration: none; padding-block: 8px; border-bottom: 3px solid transparent; }
+.bar nav a { white-space: nowrap; text-decoration: none; padding-block: 8px; border-bottom: 3px solid transparent; }
 .bar nav a:hover { color: var(--purple); border-color: var(--purple); }
 
 /* Hero */
@@ -76,14 +76,18 @@ section[id] { scroll-margin-top: 84px; }
 .sec-title { font-size: clamp(2.75rem, 1.6rem + 4.6vw, 5rem); margin-bottom: clamp(20px, 3vw, 32px); }
 .menu-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-bottom: 1.5px solid var(--rule); }
 .menu-row:last-of-type { border-bottom: 0; }
-.cat { display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 38%); align-items: center; gap: 16px; padding-block: 28px; min-width: 0; }
+.cat { display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 36%); grid-template-areas: "head art" "list art"; align-items: center; column-gap: 16px; padding-block: 28px; min-width: 0; }
+.cat .head { grid-area: head; align-self: end; min-width: 0; }
+.cat .list { grid-area: list; align-self: start; min-width: 0; }
+.cat .art { grid-area: art; justify-self: center; }
 .menu-row > .cat:first-child { padding-right: clamp(16px, 3vw, 40px); }
 .menu-row > .cat + .cat { padding-left: clamp(16px, 3vw, 40px); border-left: 1.5px solid var(--rule); }
 .cat h3 { font: 400 clamp(2rem, 1.5rem + 1.8vw, 2.75rem)/1 var(--display); color: var(--purple); }
 .cat .desc { margin: 8px 0 18px; font-weight: 600; color: var(--muted); }
 .items li { display: flex; justify-content: space-between; gap: 16px; padding-block: 5px; font-weight: 800; }
 .items b { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.cat.wide { grid-column: 1 / -1; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(16px, 3vw, 40px); }
+.cat.wide { grid-column: 1 / -1; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1.25fr); grid-template-areas: "head list art"; column-gap: clamp(16px, 3vw, 40px); }
+.cat.wide .head, .cat.wide .list { align-self: center; }
 .cat.wide .items { max-width: 380px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .chips li { padding: 4px 12px; border-radius: 999px; background: var(--lilac); color: var(--purple-deep); font-size: .875rem; font-weight: 800; }
@@ -91,7 +95,7 @@ section[id] { scroll-margin-top: 84px; }
 
 /* Mo & Mona */
 .meet { text-align: center; }
-.meet h2 { font-size: clamp(2.5rem, 1.5rem + 4.4vw, 4.75rem); display: inline-flex; align-items: center; gap: clamp(10px, 2vw, 22px); }
+.meet h2 { font-size: clamp(2.25rem, 1.5rem + 4.4vw, 4.75rem); display: inline-flex; align-items: center; gap: clamp(10px, 2vw, 22px); }
 .meet h2 .o { color: var(--orange); }
 .spark { width: clamp(28px, 4vw, 44px); height: auto; flex: none; }
 .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: clamp(28px, 4vw, 48px); text-align: left; }
@@ -111,7 +115,7 @@ section[id] { scroll-margin-top: 84px; }
 .tubs .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
 .tubs h3 { font: 400 clamp(1.625rem, 1.3rem + 1vw, 2.125rem)/1 var(--display); margin-bottom: 14px; }
 .sizes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; padding-bottom: 22px; border-bottom: 1.5px solid #D7C9EE; margin-bottom: 22px; }
-.size { min-height: 52px; border-radius: 14px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 800 1.0625rem/1 var(--body); cursor: pointer; }
+.size { white-space: nowrap; padding: 0 4px; min-height: 52px; border-radius: 14px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 800 1.0625rem/1 var(--body); cursor: pointer; }
 .size[aria-pressed="true"] { background: var(--ink); color: #fff; }
 .flavours li + li { border-top: 1.5px solid #E2D6F2; }
 .flv { display: flex; align-items: center; gap: 18px; width: 100%; padding: 8px 4px; background: none; border: 0; color: inherit; font: 800 1.1875rem/1 var(--body); text-align: left; cursor: pointer; }
@@ -165,22 +169,33 @@ footer .meta { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .menu-row { grid-template-columns: minmax(0, 1fr); }
   .menu-row > .cat + .cat { padding-left: 0; border-left: 0; border-top: 1.5px solid var(--rule); }
   .menu-row > .cat:first-child { padding-right: 0; }
-  .cat.wide { grid-template-columns: minmax(0, 1fr) minmax(120px, 38%); }
-  .cat.wide .art { grid-column: 1 / -1; }
+  .cat.wide { grid-template-columns: minmax(0, 1fr) minmax(120px, 36%); grid-template-areas: "head art" "list art"; }
+  .cat.wide .head { align-self: end; }
+  .cat.wide .list { align-self: start; }
   .tubs .art { max-width: min(100%, 420px); margin-inline: auto; }
   .soon img { margin-left: 0; }
 }
 @media (max-width: 560px) {
-  .bar nav { gap: 14px; font-size: .9375rem; }
+  .bar nav { gap: 12px; font-size: .875rem; }
   .logo { padding: 10px 14px; }
   .logo svg { width: 84px; height: 16px; }
-  .cat { grid-template-columns: minmax(0, 1fr); }
-  .cat .art { max-width: min(100%, 200px); }
-  .cat.wide { grid-template-columns: minmax(0, 1fr); }
-  .char { grid-template-columns: minmax(0, 1fr); }
+  .cat, .cat.wide { grid-template-columns: minmax(0, 1fr) 104px; grid-template-areas: "head art" "list list"; padding-block: 24px; }
+  .cat .head, .cat.wide .head { align-self: center; }
+  .cat .desc { margin-bottom: 0; }
+  .cat .list { margin-top: 14px; }
+  .cat .art { width: 104px; max-height: 120px; object-fit: contain; }
+  .cat h3 { font-size: 1.875rem; }
+  .meet h2 .spark, .together .spark { display: none; }
+  .char { grid-template-columns: minmax(0, 42%) minmax(0, 1fr); padding: 16px; gap: 14px; }
   .char.r .art { order: 0; }
+  .char h3 { font-size: 2.25rem; }
+  .tag { padding: 7px 14px; font-size: .9375rem; }
+  .char p { font-size: .9375rem; margin-top: 10px; }
+  .together p { font-size: 2rem; }
+  .hero figure { width: min(66%, 260px); }
+  .tubs .art { max-width: min(100%, 280px); }
   .sizes { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
-  .size { font-size: .9375rem; min-height: 46px; }
+  .size { font-size: .8125rem; min-height: 44px; border-radius: 12px; }
   .soon .sep { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -226,48 +241,32 @@ footer .meta { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <h2 class="fat sec-title">The Menu</h2>
       <div class="menu-row">
         <div class="cat">
-          <div>
-            <h3>Shakes</h3>
-            <p class="desc">Thick, cold and creamy ice cream shakes.</p>
-            <ul class="items" id="m-shakes"></ul>
-          </div>
+          <div class="head"><h3>Shakes</h3><p class="desc">Thick, cold and creamy ice cream shakes.</p></div>
+          <div class="list"><ul class="items" id="m-shakes"></ul></div>
           <img class="art blend" src="/img/shake.jpg" width="248" height="298" alt="Cookies and cream shake in a Momo cup">
         </div>
         <div class="cat">
-          <div>
-            <h3>Iced teas &amp; drinks</h3>
-            <p class="desc">Chilled drinks to go with your scoops.</p>
-            <ul class="items" id="m-drinks"></ul>
-          </div>
+          <div class="head"><h3>Iced teas &amp; drinks</h3><p class="desc">Chilled drinks to go with your scoops.</p></div>
+          <div class="list"><ul class="items" id="m-drinks"></ul></div>
           <img class="art blend" src="/img/icedtea.jpg" width="270" height="291" alt="Peach iced tea in a Momo cup">
         </div>
       </div>
       <div class="menu-row">
         <div class="cat wide">
-          <div>
-            <h3>Sundaes</h3>
-            <p class="desc">Generous scoops, tasty toppings and a little extra magic.</p>
-          </div>
-          <ul class="items" id="m-sundaes"></ul>
+          <div class="head"><h3>Sundaes</h3><p class="desc">Generous scoops, tasty toppings and a little extra magic.</p></div>
+          <div class="list"><ul class="items" id="m-sundaes"></ul></div>
           <img class="art blend" src="/img/sundae.jpg" width="510" height="251" alt="Chocolate sundae with a cherry on top">
         </div>
       </div>
       <div class="menu-row">
         <div class="cat">
-          <div>
-            <h3>Bites</h3>
-            <p class="desc">Small treats, big happiness.</p>
-            <ul class="items" id="m-bites"></ul>
-          </div>
+          <div class="head"><h3>Bites</h3><p class="desc">Small treats, big happiness.</p></div>
+          <div class="list"><ul class="items" id="m-bites"></ul></div>
           <img class="art blend" src="/img/brownie.jpg" width="288" height="197" alt="Chocolate brownies drizzled with fudge">
         </div>
         <div class="cat">
-          <div>
-            <h3>Little cups</h3>
-            <p class="desc">The perfect mini treat. 120 ml, any flavour.</p>
-            <ul class="items"><li><span>Little cup</span><b>Rs 400</b></li></ul>
-            <ul class="chips" id="m-cups"></ul>
-          </div>
+          <div class="head"><h3>Little cups</h3><p class="desc">The perfect mini treat. 120 ml, any flavour.</p></div>
+          <div class="list"><ul class="items"><li><span>Little cup</span><b>Rs 400</b></li></ul><ul class="chips" id="m-cups"></ul></div>
           <img class="art blend" src="/img/cup.jpg" width="198" height="208" alt="A scoop of ice cream in a Momo cup">
         </div>
       </div>
