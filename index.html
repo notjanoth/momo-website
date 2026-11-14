@@ -4,430 +4,622 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Momo Ice Cream | Ja-Ela, Sri Lanka</title>
-<meta name="description" content="Shakes, sundaes, iced teas and take-home tubs in Ja-Ela, Sri Lanka, with Havelock on the way. Momo by the House of Carmello.">
+<meta name="description" content="Shakes, sundaes, iced teas and take-home tubs in Ja-Ela, with Havelock coming soon. Momo by the House of Carmello.">
 <link rel="canonical" href="https://momoicecream.lk/">
 <meta name="theme-color" content="#5A16D2">
-<meta property="og:title" content="Momo Ice Cream">
-<meta property="og:description" content="Shakes, sundaes, iced teas and take-home tubs in Ja-Ela, Sri Lanka, with Havelock on the way. Momo by the House of Carmello.">
+<meta property="og:title" content="Momo Ice Cream | Ja-Ela, Sri Lanka">
+<meta property="og:description" content="Shakes, sundaes, iced teas and take-home tubs in Ja-Ela, with Havelock coming soon. Momo by the House of Carmello.">
 <meta property="og:image" content="https://momoicecream.lk/img/hero-bowl.jpg">
 <meta property="og:url" content="https://momoicecream.lk/">
+<meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235A16D2'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23FF5A0A'/%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"IceCreamShop","name":"Momo Ice Cream","url":"https://momoicecream.lk/","telephone":"+94112237999","address":{"@type":"PostalAddress","streetAddress":"118C, Thudella Pamunugama Road","addressLocality":"Ja-Ela","addressCountry":"LK"}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@600;700;800&display=swap">
-</head>
-<body>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@600;700;800;900&display=swap">
 <style>
-/* Layout: blush page, chunky black headlines, product shots on purple/orange blobs, one plum "Better Together" band. Deliberately single (light) theme. */
+/* Layout: same Momo brand, content placed in the order of a big-brand dairy homepage: utility bar, slide carousel, news cards, pairing spinner, product row, story banner, promise, newsletter, find us, column footer. Single light theme by design. */
 :root {
   color-scheme: light;
   --bg: #FDF3EF;
   --card: #FFF9F6;
   --ink: #1A0624;
+  --muted: #4A3A50;
   --purple: #5A16D2;
   --purple-deep: #4510A8;
   --orange: #FF5A0A;
   --peach: #FFE3CF;
   --plum: #32073F;
   --lilac: #E9E0F7;
-  --rule: rgba(26, 6, 36, .85);
-  --muted: #3B2A42;
   --display: "Bagel Fat One", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
   --body: "Nunito", "Avenir Next", "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 600 1.0625rem/1.5 var(--body); overflow-x: clip; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--plum); }
 h1, h2, h3, p, ul { margin: 0; padding: 0; }
 ul { list-style: none; }
 a { color: inherit; }
 img { max-width: 100%; height: auto; display: block; }
+button { font: inherit; }
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
-section[id] { scroll-margin-top: 84px; }
-.wrap { max-width: 1200px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.band { padding-block: clamp(48px, 7vw, 96px); }
-.fat { font-family: var(--display); font-weight: 400; line-height: .98; letter-spacing: -.01em; text-wrap: balance; }
+section[id] { scroll-margin-top: 110px; }
+.wrap { max-width: 1240px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band { padding-block: clamp(56px, 8vw, 104px); }
+.fat { font-family: var(--display); font-weight: 400; line-height: .98; text-wrap: balance; }
+.kicker { font: 900 .8125rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; }
 .blend { mix-blend-mode: multiply; }
-
-/* Buttons */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 12px 34px; border-radius: 999px; font: 800 1.25rem/1 var(--body); text-decoration: none; border: 2.5px solid transparent; cursor: pointer; transition: transform .12s, background-color .15s; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 12px 30px; border-radius: 999px; font: 900 1.0625rem/1 var(--body); text-decoration: none; border: 2.5px solid transparent; cursor: pointer; transition: transform .12s, background-color .15s; white-space: nowrap; }
 .btn:hover { transform: translateY(-2px); }
 .btn.primary { background: var(--purple); color: #fff; }
-.btn.primary:hover { background: var(--purple-deep); }
-.btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn.orange { background: var(--orange); color: #fff; }
+.btn.light { background: #fff; color: var(--ink); }
+.btn.ghost { background: transparent; border-color: currentColor; }
 
-/* Header */
-.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); }
-.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; }
-.logo { display: grid; place-items: center; background: var(--purple); color: #fff; padding: 12px 20px; line-height: 0; }
-.logo svg { width: 118px; height: 22px; }
-.bar nav { display: flex; gap: clamp(14px, 4vw, 56px); font: 800 1.125rem/1 var(--body); }
-.bar nav a { white-space: nowrap; text-decoration: none; padding-block: 8px; border-bottom: 3px solid transparent; }
+/* Utility bar + main nav */
+.util { background: var(--plum); color: #fff; font: 800 .875rem/1 var(--body); }
+.util .wrap { display: flex; justify-content: flex-end; align-items: center; gap: 16px; min-height: 40px; }
+.util nav { display: flex; gap: clamp(12px, 3vw, 28px); }
+.util a { text-decoration: none; opacity: .9; white-space: nowrap; }
+.util a:hover { opacity: 1; text-decoration: underline; }
+.util .promo { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--bg); border-bottom: 1.5px solid rgba(26, 6, 36, .1); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+.logo { display: grid; place-items: center; background: var(--purple); color: #fff; padding: 11px 18px; line-height: 0; flex: none; }
+.logo svg { width: 108px; height: 20px; }
+.bar nav { display: flex; gap: clamp(14px, 3vw, 40px); font: 900 1.0625rem/1 var(--body); }
+.bar nav a { text-decoration: none; white-space: nowrap; padding-block: 8px; border-bottom: 3px solid transparent; }
 .bar nav a:hover { color: var(--purple); border-color: var(--purple); }
+.bar .cta { flex: none; }
 
-/* Hero */
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(16px, 3vw, 40px); align-items: center; padding-block: clamp(16px, 3vw, 40px) clamp(32px, 5vw, 64px); }
-.hero h1 { font-size: clamp(2.75rem, 1.4rem + 5.4vw, 5.5rem); }
-.hero .sub { margin-top: 20px; font-size: clamp(1.0625rem, 1rem + .4vw, 1.3rem); max-width: 34ch; color: var(--muted); }
-.hero .actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
-.hero figure { margin: 0; justify-self: end; width: min(100%, 560px); }
+/* 1. Hero carousel */
+.hero { position: relative; overflow: hidden; touch-action: pan-y; }
+.slides { display: flex; transition: transform .6s cubic-bezier(.65, 0, .35, 1); will-change: transform; }
+.slides.dragging { transition: none; }
+.slide { flex: 0 0 100%; min-width: 0; display: grid; }
+.slide .wrap { width: 100%; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(20px, 4vw, 56px); align-items: center; padding-block: clamp(40px, 5vw, 72px) clamp(96px, 9vw, 120px); min-height: clamp(440px, 46vw, 620px); }
+.slide .copy { align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+.slide .copy .stack { display: flex; flex-direction: column; align-items: flex-start; }
+.slide h1, .slide h2 { font-size: clamp(2.5rem, 1.3rem + 4.4vw, 5rem); min-height: 1.96em; display: flex; align-items: flex-end; }
+.slide .tagline { margin-top: 18px; font-size: clamp(1.0625rem, 1rem + .4vw, 1.375rem); max-width: 32ch; font-weight: 700; min-height: 3em; }
+.slide .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; min-height: 52px; }
+.slide .kicker { margin-bottom: 16px; display: inline-block; padding: 8px 14px; border-radius: 999px; }
+.slide img { -webkit-user-drag: none; user-select: none; }
+.slide .pic { justify-self: center; width: min(100%, 500px); aspect-ratio: 1; border-radius: 50%; background: var(--bg); display: grid; place-items: center; overflow: hidden; }
+.slide .pic img { width: 88%; }
+.slide .pic.photo img { width: 100%; height: 100%; object-fit: cover; }
+.s-purple { background: var(--purple); color: #fff; }
+.s-purple .kicker { background: rgba(255, 255, 255, .16); }
+.s-orange { background: var(--orange); color: #fff; }
+.s-orange .kicker { background: rgba(26, 6, 36, .16); }
+.s-blush { background: var(--peach); color: var(--ink); }
+.s-blush .kicker { background: var(--purple); color: #fff; }
+.s-plum { background: var(--plum); color: #fff; }
+.s-plum .kicker { background: var(--orange); }
+.controls { position: absolute; left: 0; right: 0; bottom: clamp(14px, 2vw, 22px); transition: color .4s; }
+.controls .wrap { display: flex; align-items: center; gap: 14px; }
+.controls button { width: 46px; height: 46px; border-radius: 50%; border: 2px solid currentColor; background: transparent; color: inherit; cursor: pointer; display: grid; place-items: center; }
+.controls svg { width: 18px; height: 18px; }
+.count { font: 900 1rem/1 var(--body); font-variant-numeric: tabular-nums; min-width: 3.2em; text-align: center; }
+.dots { display: flex; gap: 8px; margin-left: 6px; }
+.dots span { width: 26px; height: 5px; border-radius: 3px; background: currentColor; opacity: .3; }
+.dots span[data-on] { opacity: 1; }
 
-/* Menu */
-.sec-title { font-size: clamp(2.75rem, 1.6rem + 4.6vw, 5rem); margin-bottom: clamp(20px, 3vw, 32px); }
-.menu-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-bottom: 1.5px solid var(--rule); }
-.menu-row:last-of-type { border-bottom: 0; }
-.cat { display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 36%); grid-template-areas: "head art" "list art"; align-items: center; column-gap: 16px; padding-block: 28px; min-width: 0; }
-.cat .head { grid-area: head; align-self: end; min-width: 0; }
-.cat .list { grid-area: list; align-self: start; min-width: 0; }
-.cat .art { grid-area: art; justify-self: center; }
-.menu-row > .cat:first-child { padding-right: clamp(16px, 3vw, 40px); }
-.menu-row > .cat + .cat { padding-left: clamp(16px, 3vw, 40px); border-left: 1.5px solid var(--rule); }
-.cat h3 { font: 400 clamp(2rem, 1.5rem + 1.8vw, 2.75rem)/1 var(--display); color: var(--purple); }
-.cat .desc { margin: 8px 0 18px; font-weight: 600; color: var(--muted); }
-.items li { display: flex; justify-content: space-between; gap: 16px; padding-block: 5px; font-weight: 800; }
-.items b { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.cat.wide { grid-column: 1 / -1; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1.25fr); grid-template-areas: "head list art"; column-gap: clamp(16px, 3vw, 40px); }
-.cat.wide .head, .cat.wide .list { align-self: center; }
-.cat.wide .items { max-width: 380px; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.chips li { padding: 4px 12px; border-radius: 999px; background: var(--lilac); color: var(--purple-deep); font-size: .875rem; font-weight: 800; }
-.fine { margin-top: 18px; font-size: .9375rem; color: var(--muted); }
+/* 2. News cards */
+.sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: clamp(24px, 3vw, 36px); }
+.sec-head h2 { font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.25rem); }
+.news { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.ncard { background: var(--card); border-radius: 24px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; text-decoration: none; transition: transform .15s; min-width: 0; }
+.ncard:hover { transform: translateY(-4px); }
+.ncard .img { aspect-ratio: 4 / 3; display: grid; place-items: center; overflow: hidden; }
+.ncard .img img { width: 78%; }
+.ncard .img.cover img { width: 100%; height: 100%; object-fit: cover; }
+.ncard .body { padding: 20px 22px 24px; display: grid; gap: 8px; align-content: start; }
+.ncard h3 { font: 400 1.5rem/1.05 var(--display); }
+.ncard p { color: var(--muted); font-size: 1rem; }
+.ncard .more { margin-top: 6px; color: var(--purple); font-weight: 900; }
+.bg-lilac { background: var(--lilac); }
+.bg-peach { background: var(--peach); }
+.bg-purple { background: var(--purple); }
+.bg-orange { background: var(--orange); }
 
-/* Mo & Mona */
-.meet { text-align: center; }
-.meet h2 { font-size: clamp(2.25rem, 1.5rem + 4.4vw, 4.75rem); display: inline-flex; align-items: center; gap: clamp(10px, 2vw, 22px); }
-.meet h2 .o { color: var(--orange); }
-.spark { width: clamp(28px, 4vw, 44px); height: auto; flex: none; }
-.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: clamp(28px, 4vw, 48px); text-align: left; }
-.char { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 12px; background: var(--card); border: 1.5px solid #F6C9AE; border-radius: 28px; padding: 20px; min-width: 0; overflow: hidden; }
-.char.r .art { order: 2; }
-.char h3 { font: 400 clamp(2.5rem, 1.8rem + 2.6vw, 3.75rem)/1 var(--display); color: var(--orange); }
-.tag { display: inline-block; margin-top: 10px; padding: 8px 20px; border-radius: 999px; background: var(--purple); color: #fff; font: 800 clamp(1rem, .9rem + .4vw, 1.25rem)/1.1 var(--body); }
-.char p { margin-top: 14px; color: var(--muted); max-width: 26ch; }
-.together { position: relative; background: var(--plum); color: #fff; margin-top: clamp(40px, 6vw, 72px); }
-.together .wave { display: block; width: 100%; height: 36px; }
-.together .wave.top { margin-top: -35px; }
-.together .wave.bot { margin-bottom: -35px; transform: scaleY(-1); }
-.together .wrap { padding-block: 22px; display: flex; align-items: center; justify-content: center; gap: 18px; }
-.together p { font: 400 clamp(2rem, 1.4rem + 2.6vw, 3.25rem)/1 var(--display); }
+/* 3. Pairing spinner */
+.pair { background: var(--purple); color: #fff; border-radius: clamp(28px, 4vw, 48px); padding: clamp(28px, 4vw, 56px); display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.pair h2 { font-size: clamp(2.5rem, 1.6rem + 3.4vw, 4rem); }
+.pair .lead { margin-top: 14px; max-width: 36ch; font-weight: 700; opacity: .92; }
+.pair .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 26px; }
+.spins { font: 900 1rem/1 var(--body); font-variant-numeric: tabular-nums; opacity: .85; }
+.reels { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 14px; }
+.reel { background: var(--bg); color: var(--ink); border-radius: 26px; padding: 18px; text-align: center; min-width: 0; }
+.reel .ph { aspect-ratio: 1; display: grid; place-items: center; border-radius: 18px; overflow: hidden; }
+.reel .ph img { width: 86%; transition: transform .35s; }
+.reel.spin .ph img { transform: rotate(-8deg) scale(.9); }
+.reel .kicker { color: var(--purple); margin-top: 12px; }
+.reel .nm { margin-top: 6px; font: 400 clamp(1.25rem, 1rem + .8vw, 1.625rem)/1.05 var(--display); min-height: 2.1em; }
+.reel .pr { font-weight: 900; color: var(--muted); }
+.plus { font: 400 2.5rem/1 var(--display); color: var(--orange); }
+.result { grid-column: 1 / -1; text-align: center; margin-top: 6px; font: 900 1.125rem/1.3 var(--body); }
 
-/* Tubs */
+/* 4. Product row */
+.row-head p { margin-top: 8px; font-size: 1.125rem; color: var(--muted); }
+.track { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 14px; scrollbar-width: thin; }
+.pcard { scroll-snap-align: start; background: var(--card); border-radius: 24px; padding: 16px 16px 20px; display: grid; gap: 6px; align-content: start; }
+.pcard .ph { aspect-ratio: 1; border-radius: 18px; display: grid; place-items: center; overflow: hidden; margin-bottom: 8px; }
+.pcard .ph img { width: 82%; }
+.pcard .meta { display: flex; justify-content: space-between; gap: 8px; }
+.pcard .kicker { color: var(--purple); }
+.pcard .price { font: 900 .8125rem/1 var(--body); letter-spacing: .1em; color: var(--orange); }
+.pcard h3 { font: 400 1.375rem/1.05 var(--display); }
+.track-nav { display: flex; gap: 10px; }
+.track-nav button { width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--ink); background: transparent; cursor: pointer; display: grid; place-items: center; }
+.track-nav svg { width: 18px; height: 18px; }
+.center { display: flex; justify-content: center; margin-top: 28px; }
+
+/* Tub picker (product module) */
+.tubs { background: var(--peach); }
 .tubs .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
-.tubs h3 { font: 400 clamp(1.625rem, 1.3rem + 1vw, 2.125rem)/1 var(--display); margin-bottom: 14px; }
-.sizes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; padding-bottom: 22px; border-bottom: 1.5px solid #D7C9EE; margin-bottom: 22px; }
-.size { white-space: nowrap; padding: 0 4px; min-height: 52px; border-radius: 14px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 800 1.0625rem/1 var(--body); cursor: pointer; }
+.tubs .art { max-width: min(100%, 520px); justify-self: center; }
+.tubs h2 { font-size: clamp(2.5rem, 1.6rem + 3.4vw, 4rem); margin-bottom: 24px; }
+.tubs h3 { font: 900 .8125rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 12px; }
+.sizes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-bottom: 24px; }
+.size { min-height: 50px; padding: 0 4px; border-radius: 14px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font-weight: 900; white-space: nowrap; cursor: pointer; }
 .size[aria-pressed="true"] { background: var(--ink); color: #fff; }
-.flavours li + li { border-top: 1.5px solid #E2D6F2; }
-.flv { display: flex; align-items: center; gap: 18px; width: 100%; padding: 8px 4px; background: none; border: 0; color: inherit; font: 800 1.1875rem/1 var(--body); text-align: left; cursor: pointer; }
-.flv .dot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--ink); flex: none; display: grid; place-items: center; }
-.flv[aria-checked="true"] .dot::after { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--purple); }
-.flv img { width: 60px; height: 54px; object-fit: cover; border-radius: 50%; }
-.flv .p { margin-left: auto; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
-.pick { width: 100%; margin-top: 26px; min-height: 64px; font-size: 1.375rem; }
+.flvs { display: flex; flex-wrap: wrap; gap: 10px; }
+.flv { display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px 6px 6px; border-radius: 999px; border: 2px solid transparent; background: var(--bg); color: var(--ink); font-weight: 900; cursor: pointer; }
+.flv img, .flv .sw { width: 42px; height: 38px; object-fit: cover; border-radius: 50%; flex: none; }
+.flv .sw { background: radial-gradient(circle at 35% 30%, #F6D9A0, #D9A04E 60%, #B7792E); }
+.tub-note { margin-top: 10px; font-size: .9375rem; color: var(--muted); min-height: 1.5em; }
+.flv[aria-checked="true"] { border-color: var(--purple); background: #fff; }
+.pick { margin-top: 26px; width: 100%; min-height: 60px; font-size: 1.25rem; }
 
-/* Find us */
-.find { position: relative; overflow: hidden; }
-.find .blob { position: absolute; right: -6%; top: 120px; width: min(46vw, 560px); color: var(--orange); z-index: 0; }
-.find .wrap { position: relative; z-index: 1; }
-.find .sec-title { color: var(--orange); }
-.place { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(20px, 3vw, 40px); align-items: center; background: var(--card); border-radius: 28px; padding: clamp(18px, 2.5vw, 30px); box-shadow: 0 1px 0 rgba(26, 6, 36, .04); }
-.place h3 { font: 400 clamp(3rem, 2rem + 3.6vw, 5rem)/1 var(--display); }
-.addr { display: flex; gap: 14px; align-items: flex-start; margin-top: 20px; font: 800 clamp(1.125rem, 1rem + .6vw, 1.5rem)/1.3 var(--body); }
-.addr svg { width: 30px; height: 36px; flex: none; color: var(--orange); }
-.pill { display: inline-flex; align-items: center; gap: 12px; margin-top: 22px; padding: 10px 22px; border-radius: 999px; background: var(--peach); font: 800 1.25rem/1 var(--body); }
-.pill::before { content: ""; width: 16px; height: 16px; border-radius: 50%; background: var(--orange); }
-.pill.plain::before { display: none; }
-.place .btn { margin-top: 24px; display: flex; width: fit-content; }
-.place .btn svg { width: 26px; height: 26px; }
-.place .photo { border-radius: 26px; overflow: hidden; aspect-ratio: 720 / 449; }
-.place .photo img { width: 100%; height: 100%; object-fit: cover; }
-.note { margin-top: 12px; font-size: .9375rem; color: var(--muted); }
-.soon { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px; margin-top: 24px; background: var(--card); border-radius: 28px; padding: 18px clamp(18px, 2.5vw, 30px); }
-.soon h3 { font: 400 clamp(2.25rem, 1.7rem + 2vw, 3.25rem)/1 var(--display); }
-.soon .sep { width: 1.5px; align-self: stretch; background: #C9BCC9; }
-.soon .pill { margin-top: 0; }
-.soon img { margin-left: auto; width: min(100%, 360px); border-radius: 20px; }
+/* 5. Story banner */
+.story { background: var(--plum); color: #fff; overflow: hidden; }
+.story .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.story h2 { font-size: clamp(2.5rem, 1.5rem + 4vw, 4.75rem); }
+.story h2 .o { color: var(--orange); }
+.story p { margin-top: 18px; max-width: 46ch; font-weight: 700; opacity: .92; }
+.story .actions { margin-top: 28px; }
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.duo figure { margin: 0; background: var(--bg); border-radius: 26px; padding: 14px; color: var(--ink); display: flex; flex-direction: column; }
+.duo img { border-radius: 16px; width: 100%; aspect-ratio: 1 / 1.08; object-fit: contain; mix-blend-mode: multiply; }
+.duo figcaption { margin-top: 12px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.duo b { font: 400 1.75rem/1 var(--display); color: var(--orange); }
+.duo span { font-weight: 800; font-size: .9375rem; color: var(--muted); }
 
-/* Partner */
-.partner .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
-.ptile { border-radius: 28px; padding: clamp(24px, 3vw, 36px); display: grid; gap: 14px; align-content: start; justify-items: start; }
-.ptile.purple { background: var(--purple); color: #fff; }
-.ptile.orange { background: var(--orange); color: #fff; }
-.ptile h3 { font: 400 clamp(2rem, 1.6rem + 1.6vw, 2.75rem)/1 var(--display); }
-.ptile p { max-width: 44ch; font-weight: 700; }
-.tel { font: 400 clamp(1.5rem, 1.2rem + 1vw, 2rem)/1 var(--display); text-decoration: none; font-variant-numeric: tabular-nums; }
+/* 6. Promise */
+.promise { text-align: center; }
+.promise .seal { width: 112px; height: 112px; margin: 0 auto 22px; border-radius: 50%; background: var(--orange); color: #fff; display: grid; place-items: center; font: 400 1.125rem/1 var(--display); text-align: center; transform: rotate(-8deg); border: 4px dashed rgba(255, 255, 255, .7); outline: 4px solid var(--orange); }
+.promise h2 { font-size: clamp(2.25rem, 1.5rem + 3vw, 3.75rem); max-width: 18ch; margin-inline: auto; }
+.promise p { margin: 18px auto 0; max-width: 58ch; color: var(--muted); font-size: 1.125rem; }
+.promise .actions { margin-top: 26px; display: flex; justify-content: center; }
+
+/* 7. Newsletter + 8. Find us */
+.duo-panels { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.panel { border-radius: 32px; padding: clamp(26px, 3.5vw, 44px); display: grid; gap: 14px; align-content: start; min-width: 0; }
+.panel h2 { font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem); }
+.panel.news-panel { background: var(--orange); color: #fff; }
+.panel.find-panel { background: var(--card); }
+.signup { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.signup label { flex-basis: 100%; font-weight: 800; }
+.signup input { flex: 1 1 220px; min-width: 0; min-height: 54px; border-radius: 999px; border: 0; padding: 0 22px; font: 700 1.0625rem var(--body); color: var(--ink); background: #fff; }
+.signup .btn { flex: none; }
+.signup .msg { flex-basis: 100%; font-weight: 800; min-height: 1.5em; }
+.loc { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: center; padding-block: 12px; }
+.loc + .loc { border-top: 1.5px solid #EBDCD4; }
+.loc .thumb { aspect-ratio: 1; border-radius: 18px; overflow: hidden; background: var(--lilac); }
+.loc .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.loc h3 { font: 400 1.75rem/1 var(--display); }
+.loc p { color: var(--muted); font-size: 1rem; margin-top: 4px; }
+.loc .pill { display: inline-block; margin-top: 8px; padding: 5px 12px; border-radius: 999px; background: var(--peach); font: 900 .8125rem/1.2 var(--body); letter-spacing: .06em; text-transform: uppercase; }
+.panel .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
 
 /* Footer */
-footer { background: var(--plum); color: #fff; }
-footer .wrap { padding-block: 40px 28px; display: grid; gap: 22px; }
-footer .big { width: 100%; aspect-ratio: 792 / 144; color: var(--orange); }
-footer .meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: .9375rem; font-weight: 700; opacity: .85; }
+footer { background: var(--plum); color: #fff; margin-top: clamp(56px, 8vw, 104px); }
+footer .top { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: 28px; padding-block: clamp(40px, 5vw, 64px) 28px; }
+footer .brand svg { width: 160px; height: 30px; color: var(--orange); }
+footer .brand p { margin-top: 14px; max-width: 28ch; opacity: .85; }
+footer h3 { font: 900 .8125rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+footer li + li { margin-top: 8px; }
+footer a { text-decoration: none; font-weight: 700; opacity: .9; }
+footer a:hover { opacity: 1; text-decoration: underline; }
+footer .legal { border-top: 1px solid rgba(255, 255, 255, .18); padding-block: 18px 26px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; font-size: .875rem; opacity: .8; }
 
-@media (max-width: 860px) {
-  .hero .wrap, .tubs .grid, .place, .partner .grid, .pair { grid-template-columns: minmax(0, 1fr); }
-  .hero figure { justify-self: center; width: min(88%, 440px); }
-  .menu-row { grid-template-columns: minmax(0, 1fr); }
-  .menu-row > .cat + .cat { padding-left: 0; border-left: 0; border-top: 1.5px solid var(--rule); }
-  .menu-row > .cat:first-child { padding-right: 0; }
-  .cat.wide { grid-template-columns: minmax(0, 1fr) minmax(120px, 36%); grid-template-areas: "head art" "list art"; }
-  .cat.wide .head { align-self: end; }
-  .cat.wide .list { align-self: start; }
-  .tubs .art { max-width: min(100%, 420px); margin-inline: auto; }
-  .soon img { margin-left: 0; }
+@media (max-width: 960px) {
+  .news { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pair, .story .wrap, .tubs .grid, .duo-panels { grid-template-columns: minmax(0, 1fr); }
+  footer .top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  footer .brand { grid-column: 1 / -1; }
+  .bar .cta { display: none; }
+}
+@media (max-width: 720px) {
+  .slide .wrap { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: 28px; padding-bottom: 92px; align-content: start; }
+  .slide .pic { width: min(56%, 230px); order: -1; }
+  .slide h1, .slide h2 { min-height: 2.94em; }
+  .util .promo { display: none; }
+  .util .wrap { justify-content: flex-end; }
 }
 @media (max-width: 560px) {
   .bar nav { gap: 12px; font-size: .875rem; }
-  .logo { padding: 10px 14px; }
-  .logo svg { width: 84px; height: 16px; }
-  .cat, .cat.wide { grid-template-columns: minmax(0, 1fr) 104px; grid-template-areas: "head art" "list list"; padding-block: 24px; }
-  .cat .head, .cat.wide .head { align-self: center; }
-  .cat .desc { margin-bottom: 0; }
-  .cat .list { margin-top: 14px; }
-  .cat .art { width: 104px; max-height: 120px; object-fit: contain; }
-  .cat h3 { font-size: 1.875rem; }
-  .meet h2 .spark, .together .spark { display: none; }
-  .char { grid-template-columns: minmax(0, 42%) minmax(0, 1fr); padding: 16px; gap: 14px; }
-  .char.r .art { order: 0; }
-  .char h3 { font-size: 2.25rem; }
-  .tag { padding: 7px 14px; font-size: .9375rem; }
-  .char p { font-size: .9375rem; margin-top: 10px; }
-  .together p { font-size: 2rem; }
-  .hero figure { width: min(66%, 260px); }
-  .tubs .art { max-width: min(100%, 280px); }
-  .sizes { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
-  .size { font-size: .8125rem; min-height: 44px; border-radius: 12px; }
-  .soon .sep { display: none; }
+  .logo { padding: 9px 12px; }
+  .logo svg { width: 80px; height: 15px; }
+  .news { grid-template-columns: minmax(0, 1fr); }
+  .ncard { grid-template-columns: 112px minmax(0, 1fr); grid-template-rows: none; }
+  .ncard .img { aspect-ratio: auto; height: 100%; }
+  .ncard .body { padding: 16px; }
+  .ncard h3 { font-size: 1.25rem; }
+  .reels { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .plus { display: none; }
+  .reel { padding: 12px; }
+  .size { font-size: .8125rem; min-height: 44px; }
+  .loc { grid-template-columns: 84px minmax(0, 1fr); }
+  footer .top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dots { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn { transition: none; }
+  .slide, .btn, .ncard, .reel .ph img { transition: none; }
 }
 </style>
-
+</head>
+<body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<symbol id="logo-h-flat" viewBox="144 461 792 144"><path fill="currentColor" d="M 250.6 600.4 C 248.4 600.4 246.7 598.5 246.9 596.4 C 247.4 591.2 247.8 582.2 246.5 575.9 C 242.9 558.9 239.2 539 221.9 539 C 204.7 539 201 558.9 197.4 575.9 C 196.1 582.2 196.5 591.2 197 596.4 C 197.2 598.5 195.5 600.4 193.3 600.4 L 164 600.4 C 162 600.4 160.4 599 160.3 597.1 L 148.7 481.8 C 148.5 479.6 150.2 477.7 152.4 477.7 L 193.7 477.7 C 195.7 477.7 197.4 479.3 197.4 481.4 L 197.4 494.4 C 197.4 497.4 200.8 499.2 203.3 497.4 C 225.9 481.1 253.8 484 265.3 494.8 C 266 495.5 267.4 496.7 268.7 498 C 270.4 499.6 273.2 499.3 274.4 497.2 L 277.7 491.9 C 293.4 464.2 324.9 463.3 344.9 467 C 345 467 345.1 467 345.3 467.1 C 391.5 479.7 392.7 541.7 392.4 580.2 C 392.3 585.6 393 590.9 393.4 596.4 C 393.6 598.5 391.9 600.4 389.7 600.4 L 350.1 600.4 C 347.9 600.4 346.2 598.5 346.4 596.3 L 350 559 C 355.1 521.6 339.7 512.5 325 514.5 C 315.9 515.7 303.5 523.4 297.5 545.7 C 297.5 545.8 297.4 545.9 297.4 546.1 C 297 548.4 292.6 573.3 295.1 596.3 C 295.3 598.5 293.6 600.4 291.4 600.4 Z M 250.6 600.4"/><path fill="currentColor" d="M 640.9 600.5 C 638.7 600.5 637 598.6 637.2 596.5 C 637.6 591.3 638.1 582.3 636.8 575.9 C 633.2 559 629.5 539.1 612.2 539.1 C 594.9 539.1 591.2 559 587.7 575.9 C 586.3 582.3 586.8 591.3 587.2 596.5 C 587.4 598.6 585.7 600.5 583.5 600.5 L 554.6 600.5 C 552.5 600.5 550.8 598.8 550.9 596.7 C 551.1 569 554.8 521.3 587.7 497.4 C 610.4 479.6 642.9 483.9 655.6 494.9 C 656.3 495.6 657.6 496.8 658.9 498.1 C 660.7 499.7 663.5 499.4 664.7 497.3 L 667.9 492 C 683.6 464.2 715.2 463.4 735.2 467.1 C 735.3 467.1 735.4 467.1 735.5 467.1 C 752.9 471.8 765.4 483.8 772.6 500 C 777.5 510.9 777.5 523.5 778.5 535.3 C 780.4 555.6 781.9 576.1 783.7 596.4 C 783.9 598.6 782.2 600.5 780 600.5 L 740.3 600.5 C 738.1 600.5 736.4 598.6 736.6 596.4 L 740.2 559.1 C 745.3 521.6 729.9 512.6 715.3 514.6 C 706.1 515.8 693.8 523.5 687.8 545.8 C 687.7 545.9 687.7 546 687.7 546.1 C 687.3 548.5 682.9 573.4 685.3 596.4 C 685.6 598.6 683.8 600.5 681.6 600.5 Z M 640.9 600.5"/><path fill="currentColor" d="M 465.5 465.8 C 499.1 462.5 527.8 480.9 537.6 512.9 C 545.6 539 539.5 561.3 520 580.5 C 506.2 594.1 493.8 599.6 474.4 600.4 C 434.7 601.9 400.8 567.2 403.8 528 C 406.3 494 431.3 469.1 465.5 465.8 M 488.3 526.9 C 485.5 518.6 478.5 514 469.9 514.5 C 460.6 515.1 453.4 522 452.7 531.5 C 451.9 542.5 461.7 552.1 472.4 551.3 C 478.4 550.8 482.3 548.6 485.8 543.7 C 489.7 538.3 490.5 533.2 488.3 526.9"/><path fill="currentColor" d="M 855.8 465.8 C 889.4 462.5 918.1 480.9 927.9 512.9 C 935.9 539 929.8 561.3 910.2 580.5 C 896.4 594.1 884.1 599.6 864.6 600.4 C 825 601.9 791.1 567.2 794 528 C 796.6 494 821.6 469.1 855.8 465.8 M 878.6 526.9 C 875.8 518.6 868.7 514 860.1 514.5 C 850.8 515.1 843.7 522 843 531.5 C 842.1 542.5 851.9 552.1 862.7 551.3 C 868.7 550.8 872.6 548.6 876.1 543.7 C 879.9 538.3 880.7 533.2 878.6 526.9"/></symbol>
-<symbol id="spark" viewBox="0 0 44 44"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M8 6l10 10"/><path d="M4 22h14"/><path d="M8 38l10-10"/></g></symbol>
+<symbol id="logo" viewBox="144 461 792 144"><path fill="currentColor" d="M251 600C248 600 247 598 247 596C247 591 248 582 246 576C243 559 239 539 222 539C205 539 201 559 197 576C196 582 196 591 197 596C197 598 196 600 193 600L164 600C162 600 160 599 160 597L149 482C148 480 150 478 152 478L194 478C196 478 197 479 197 481L197 494C197 497 201 499 203 497C226 481 254 484 265 495C266 496 267 497 269 498C270 500 273 499 274 497L278 492C293 464 325 463 345 467C345 467 345 467 345 467C392 480 393 542 392 580C392 586 393 591 393 596C394 598 392 600 390 600L350 600C348 600 346 598 346 596L350 559C355 522 340 512 325 514C316 516 304 523 298 546C298 546 297 546 297 546C297 548 293 573 295 596C295 598 294 600 291 600ZM251 600"/><path fill="currentColor" d="M641 600C639 600 637 599 637 596C638 591 638 582 637 576C633 559 630 539 612 539C595 539 591 559 588 576C586 582 587 591 587 596C587 599 586 600 584 600L555 600C552 600 551 599 551 597C551 569 555 521 588 497C610 480 643 484 656 495C656 496 658 497 659 498C661 500 664 499 665 497L668 492C684 464 715 463 735 467C735 467 735 467 736 467C753 472 765 484 773 500C778 511 778 524 778 535C780 556 782 576 784 596C784 599 782 600 780 600L740 600C738 600 736 599 737 596L740 559C745 522 730 513 715 515C706 516 694 524 688 546C688 546 688 546 688 546C687 548 683 573 685 596C686 599 684 600 682 600ZM641 600"/><path fill="currentColor" d="M466 466C499 462 528 481 538 513C546 539 540 561 520 580C506 594 494 600 474 600C435 602 401 567 404 528C406 494 431 469 466 466M488 527C486 519 478 514 470 514C461 515 453 522 453 532C452 542 462 552 472 551C478 551 482 549 486 544C490 538 490 533 488 527"/><path fill="currentColor" d="M856 466C889 462 918 481 928 513C936 539 930 561 910 580C896 594 884 600 865 600C825 602 791 567 794 528C797 494 822 469 856 466M879 527C876 519 869 514 860 514C851 515 844 522 843 532C842 542 852 552 863 551C869 551 873 549 876 544C880 538 881 533 879 527"/></symbol>
+<symbol id="ic-prev" viewBox="0 0 18 18"><path d="M11.5 3 5.5 9l6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-next" viewBox="0 0 18 18"><path d="M6.5 3l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
+
+<div class="util">
+  <div class="wrap">
+    <nav aria-label="Quick links">
+      <a href="#find-us">Where to find us</a>
+      <a href="#find-us">Order delivery</a>
+      <a href="franchise.html">Franchise</a>
+    </nav>
+  </div>
+</div>
 
 <header class="bar">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Momo Ice Cream, home"><svg aria-hidden="true"><use href="#logo-h-flat"/></svg></a>
+    <a class="logo" href="#top" aria-label="Momo Ice Cream, home"><svg aria-hidden="true"><use href="#logo"/></svg></a>
     <nav aria-label="Main">
       <a href="#menu">Menu</a>
       <a href="#tubs">Tubs</a>
-      <a href="#find-us">Find us</a>
-      <a href="#partner">Partner</a>
+      <a href="#story">Our story</a>
+      <a href="#find-us">Visit</a>
     </nav>
+    <a class="btn primary cta" href="#menu">See the menu</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero">
+  <!-- 1. Hero carousel -->
+  <section class="hero" aria-roledescription="carousel" aria-label="Highlights">
+    <div class="slides" id="slides">
+      <div class="slide s-purple" aria-roledescription="slide" aria-label="1 of 4">
+        <div class="wrap">
+          <div class="copy"><div class="stack">
+            <span class="kicker">Momo by the House of Carmello</span>
+            <h1 class="fat">Scoop. Shake. Sip.</h1>
+            <p class="tagline">Sundaes, shakes, iced teas and take-home tubs, made for sharing.</p>
+            <div class="actions"><a class="btn light" href="#menu">See the menu</a><a class="btn ghost" href="#find-us">Find us</a></div>
+          </div></div>
+          <div class="pic"><img class="blend" src="img/hero-bowl.jpg" width="687" height="880" alt="Three scoops in a Momo cup with a cherry and a wafer"></div>
+        </div>
+      </div>
+      <div class="slide s-orange" aria-roledescription="slide" aria-label="2 of 4">
+        <div class="wrap">
+          <div class="copy"><div class="stack">
+            <span class="kicker">Shakes from Rs 450</span>
+            <h2 class="fat">Thick shakes. Big straws.</h2>
+            <p class="tagline">Vanilla, chocolate, cookie, brownie and more, blended to order.</p>
+            <div class="actions"><a class="btn light" href="#menu">Pick a shake</a></div>
+          </div></div>
+          <div class="pic"><img class="blend" src="img/shake.jpg" width="248" height="298" alt="Cookies and cream shake"></div>
+        </div>
+      </div>
+      <div class="slide s-blush" aria-roledescription="slide" aria-label="3 of 4">
+        <div class="wrap">
+          <div class="copy"><div class="stack">
+            <span class="kicker">Take-home tubs</span>
+            <h2 class="fat">Party in a tub.</h2>
+            <p class="tagline">Six flavours, from an 80 ml cup to a 4 litre tub for the whole family.</p>
+            <div class="actions"><a class="btn primary" href="#tubs">Choose your tub</a></div>
+          </div></div>
+          <div class="pic"><img class="blend" src="img/tub.jpg" width="765" height="680" alt="Momo take-home tub"></div>
+        </div>
+      </div>
+      <div class="slide s-plum" aria-roledescription="slide" aria-label="4 of 4">
+        <div class="wrap">
+          <div class="copy"><div class="stack">
+            <span class="kicker">Coming soon</span>
+            <h2 class="fat">Havelock, we're on our way.</h2>
+            <p class="tagline">Our second parlour is opening in Colombo. Ja-Ela is open now.</p>
+            <div class="actions"><a class="btn orange" href="#find-us">Plan your visit</a></div>
+          </div></div>
+          <div class="pic photo"><img src="img/havelock-sq.jpg" width="700" height="700" alt="The new Momo Havelock shopfront with its glowing orange front"></div>
+        </div>
+      </div>
+    </div>
+    <div class="controls" id="controls">
+      <div class="wrap">
+        <button type="button" id="prev" aria-label="Previous slide"><svg aria-hidden="true"><use href="#ic-prev"/></svg></button>
+        <span class="count" id="count" aria-live="polite">1 / 4</span>
+        <button type="button" id="next" aria-label="Next slide"><svg aria-hidden="true"><use href="#ic-next"/></svg></button>
+        <span class="dots" id="dots" aria-hidden="true"><span data-on></span><span></span><span></span><span></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. News cards -->
+  <section class="band" aria-labelledby="scoop-h">
     <div class="wrap">
+      <div class="sec-head"><h2 class="fat" id="scoop-h">Get the full scoop.</h2></div>
+      <div class="news">
+        <a class="ncard" href="#find-us">
+          <div class="img cover"><img src="img/havelock.jpg" width="960" height="751" alt=""></div>
+          <div class="body"><span class="kicker" style="color:var(--orange)">Coming soon</span><h3>Havelock is next</h3><p>A second Momo parlour is opening in Colombo.</p><span class="more">Find us →</span></div>
+        </a>
+        <a class="ncard" href="#menu">
+          <div class="img bg-lilac"><img class="blend" src="img/cup.jpg" width="198" height="208" alt=""></div>
+          <div class="body"><span class="kicker" style="color:var(--orange)">Rs 400</span><h3>Little cups, eight flavours</h3><p>Matcha, Milo, Red Velvet Cookie and more in a 120 ml cup.</p><span class="more">See flavours →</span></div>
+        </a>
+        <a class="ncard" href="#tubs">
+          <div class="img bg-peach"><img class="blend" src="img/tub.jpg" width="765" height="680" alt=""></div>
+          <div class="body"><span class="kicker" style="color:var(--orange)">Tubs</span><h3>Feeding a crowd?</h3><p>Grab a 2 or 4 litre tub for parties and family nights.</p><span class="more">Choose a tub →</span></div>
+        </a>
+        <a class="ncard" href="franchise.html">
+          <div class="img bg-purple"><img src="img/mo.jpg" width="338" height="396" alt="" style="border-radius:14px;width:62%"></div>
+          <div class="body"><span class="kicker" style="color:var(--orange)">Franchise</span><h3>Open a Momo</h3><p>Bring Momo to your town with our franchise package.</p><span class="more">Partner with us →</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Pairing spinner -->
+  <section class="wrap" aria-labelledby="pair-h">
+    <div class="pair">
       <div>
-        <h1 class="fat">Have Scoops, Sundaes and Drinks</h1>
-        <p class="sub">Shakes, sundaes, iced teas and take-home tubs in Ja-Ela, with Havelock on the way. From the House of Carmello.</p>
+        <span class="kicker" style="color:var(--peach)">Can't decide?</span>
+        <h2 class="fat" id="pair-h" style="margin-top:12px">Spin to pair.</h2>
+        <p class="lead">Let Momo choose a treat and a drink for you. Spin as many times as you like.</p>
         <div class="actions">
-          <a class="btn primary" href="#menu">See the menu</a>
-          <a class="btn ghost" href="#find-us">Find us</a>
+          <button type="button" class="btn orange" id="spin">Spin to pair</button>
+          <span class="spins" id="spins">Spins: 0</span>
         </div>
       </div>
-      <figure><img class="blend" src="/img/hero-bowl.jpg" width="687" height="880" alt="Three scoops in a Momo cup with whipped cream, a cherry and a wafer"></figure>
+      <div class="reels">
+        <div class="reel" id="reelA"><div class="ph bg-peach"><img class="blend" id="imgA" src="img/sundae.jpg" width="510" height="251" alt=""></div><p class="kicker">Treat</p><p class="nm" id="nmA">Brownie &amp; Cherry Sundae</p><p class="pr" id="prA">Rs 600</p></div>
+        <span class="plus" aria-hidden="true">+</span>
+        <div class="reel" id="reelB"><div class="ph bg-lilac"><img class="blend" id="imgB" src="img/icedtea.jpg" width="270" height="291" alt=""></div><p class="kicker">Drink</p><p class="nm" id="nmB">Thai Iced Tea</p><p class="pr" id="prB">Rs 400</p></div>
+        <p class="result" id="result" aria-live="polite">Together: Rs 1,000</p>
+      </div>
     </div>
   </section>
 
-  <section class="band" id="menu" style="padding-top: clamp(24px, 4vw, 48px)">
+  <!-- 4. Product row -->
+  <section class="band" id="menu" aria-labelledby="menu-h">
     <div class="wrap">
-      <h2 class="fat sec-title">The Menu</h2>
-      <div class="menu-row">
-        <div class="cat">
-          <div class="head"><h3>Shakes</h3><p class="desc">Thick, cold and creamy ice cream shakes.</p></div>
-          <div class="list"><ul class="items" id="m-shakes"></ul></div>
-          <img class="art blend" src="/img/shake.jpg" width="248" height="298" alt="Cookies and cream shake in a Momo cup">
-        </div>
-        <div class="cat">
-          <div class="head"><h3>Iced teas &amp; drinks</h3><p class="desc">Chilled drinks to go with your scoops.</p></div>
-          <div class="list"><ul class="items" id="m-drinks"></ul></div>
-          <img class="art blend" src="/img/icedtea.jpg" width="270" height="291" alt="Peach iced tea in a Momo cup">
-        </div>
+      <div class="sec-head">
+        <div class="row-head"><h2 class="fat" id="menu-h">Tried, true and totally scoopable.</h2><p>Our parlour favourites. Swipe for more.</p></div>
+        <div class="track-nav"><button type="button" id="tprev" aria-label="Scroll left"><svg aria-hidden="true"><use href="#ic-prev"/></svg></button><button type="button" id="tnext" aria-label="Scroll right"><svg aria-hidden="true"><use href="#ic-next"/></svg></button></div>
       </div>
-      <div class="menu-row">
-        <div class="cat wide">
-          <div class="head"><h3>Sundaes</h3><p class="desc">Generous scoops, tasty toppings and a little extra magic.</p></div>
-          <div class="list"><ul class="items" id="m-sundaes"></ul></div>
-          <img class="art blend" src="/img/sundae.jpg" width="510" height="251" alt="Chocolate sundae with a cherry on top">
-        </div>
+      <div class="track" id="track" tabindex="0" aria-label="Menu favourites"></div>
+      <div class="center"><a class="btn primary" href="#full-menu" id="fullBtn">Explore the full menu</a></div>
+      <div id="full-menu" hidden style="margin-top:28px">
+        <div class="news" id="fullList"></div>
+        <p style="margin-top:16px;color:var(--muted);font-size:.9375rem">Parlour prices in Sri Lankan rupees. Prices on Uber Eats and PickMe can be different.</p>
       </div>
-      <div class="menu-row">
-        <div class="cat">
-          <div class="head"><h3>Bites</h3><p class="desc">Small treats, big happiness.</p></div>
-          <div class="list"><ul class="items" id="m-bites"></ul></div>
-          <img class="art blend" src="/img/brownie.jpg" width="288" height="197" alt="Chocolate brownies drizzled with fudge">
-        </div>
-        <div class="cat">
-          <div class="head"><h3>Little cups</h3><p class="desc">The perfect mini treat. 120 ml, any flavour.</p></div>
-          <div class="list"><ul class="items"><li><span>Little cup</span><b>Rs 400</b></li></ul><ul class="chips" id="m-cups"></ul></div>
-          <img class="art blend" src="/img/cup.jpg" width="198" height="208" alt="A scoop of ice cream in a Momo cup">
-        </div>
-      </div>
-      <p class="fine">Parlour prices in Sri Lankan rupees. Prices on Uber Eats and PickMe can be different.</p>
     </div>
   </section>
 
-  <section class="band meet" aria-labelledby="meet-h" style="padding-bottom:0">
+  <!-- Tub picker -->
+  <section class="band tubs" id="tubs" aria-labelledby="tubs-h">
     <div class="wrap">
-      <h2 class="fat" id="meet-h"><svg class="spark" aria-hidden="true" style="color:var(--purple)"><use href="#spark"/></svg><span>Meet <span class="o">Mo &amp; Mona</span></span><svg class="spark" aria-hidden="true" style="color:var(--purple);transform:scaleX(-1)"><use href="#spark"/></svg></h2>
-      <div class="pair">
-        <div class="char">
-          <img class="art blend" src="/img/mo.jpg" width="338" height="396" alt="Illustration of Mo skateboarding">
-          <div>
-            <h3>Mo</h3>
-            <span class="tag">The Playful One</span>
-            <p>Always first in line, always going for the double scoop.</p>
-          </div>
-        </div>
-        <div class="char r">
-          <img class="art blend" src="/img/mona.jpg" width="419" height="374" alt="Illustration of Mona sitting back, relaxed">
-          <div>
-            <h3>Mona</h3>
-            <span class="tag">The Cool One</span>
-            <p>Knows every flavour on the board and picks a new one each time.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="together">
-      <svg class="wave top" viewBox="0 0 1440 36" preserveAspectRatio="none" aria-hidden="true"><path fill="#32073F" d="M0 36V18C120 4 240 0 360 10s240 26 360 22 240-24 360-26 240 10 360 14v-2 0V36z"/></svg>
-      <div class="wrap"><svg class="spark" aria-hidden="true" style="color:var(--orange)"><use href="#spark"/></svg><p>Better Together</p><svg class="spark" aria-hidden="true" style="color:var(--orange);transform:scaleX(-1)"><use href="#spark"/></svg></div>
-      <svg class="wave bot" viewBox="0 0 1440 36" preserveAspectRatio="none" aria-hidden="true"><path fill="#32073F" d="M0 36V18C120 4 240 0 360 10s240 26 360 22 240-24 360-26 240 10 360 14v-2 0V36z"/></svg>
-    </div>
-  </section>
-
-  <section class="band tubs" id="tubs">
-    <div class="wrap">
-      <h2 class="fat sec-title">Take a tub home</h2>
       <div class="grid">
-        <img class="art blend" src="/img/tub.jpg" width="765" height="680" alt="Momo take-home tub with vanilla, strawberry and chocolate scoops">
+        <img class="art blend" src="img/tub.jpg" width="765" height="680" alt="Momo take-home tub with three scoops">
         <div>
+          <h2 class="fat" id="tubs-h">Choose your tub.</h2>
           <h3>Size</h3>
           <div class="sizes" id="sizes" role="group" aria-label="Tub size"></div>
           <h3>Flavour</h3>
-          <ul class="flavours" id="flavours" role="radiogroup" aria-label="Flavour"></ul>
+          <div class="flvs" id="flvs" role="radiogroup" aria-label="Flavour"></div>
           <a class="btn primary pick" id="pick" href="#find-us">Select a size</a>
+          <p class="tub-note" id="tubnote" aria-live="polite"></p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="band find" id="find-us">
-    <svg class="blob" viewBox="0 0 600 520" aria-hidden="true"><path fill="currentColor" d="M600 0v520c-60-10-90-80-140-120S330 360 250 330 70 300 30 230 40 80 140 50 330 60 420 30 560-10 600 0z"/></svg>
+  <!-- 5. Story banner -->
+  <section class="band story" id="story" aria-labelledby="story-h">
     <div class="wrap">
-      <h2 class="fat sec-title">Find Us</h2>
-      <div class="place">
-        <div>
-          <h3>Ja-Ela</h3>
-          <p class="addr"><svg viewBox="0 0 30 36" aria-hidden="true"><path fill="currentColor" d="M15 0C6.7 0 0 6.5 0 14.6 0 25.5 15 36 15 36s15-10.5 15-21.4C30 6.5 23.3 0 15 0zm0 20a5.6 5.6 0 1 1 0-11.2A5.6 5.6 0 0 1 15 20z"/></svg><span>118C, Thudella Pamunugama Road, Ja-Ela</span></p>
-          <span class="pill">Now open</span>
-          <a class="btn primary" href="https://www.google.com/maps/search/?api=1&amp;query=Momo+Ice+Cream+Ja+Ela"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 2 2.5 10.2l7.8 3.5 3.5 7.8L22 2z"/></svg>Get directions</a>
-          <p class="note">Delivery: search "Momo Ja-Ela" on Uber Eats or PickMe.</p>
-        </div>
-        <div class="photo"><img src="/img/store.jpg" width="720" height="449" alt="Inside the Momo ice cream parlour"></div>
+      <div>
+        <span class="kicker" style="color:var(--orange)">Our story</span>
+        <h2 class="fat" id="story-h" style="margin-top:12px">Two friends, <span class="o">one big scoop.</span></h2>
+        <p>Momo is the House of Carmello's parlour brand, built for easy, everyday treats. Mo and Mona are the faces of it: one never says no to a double scoop, the other tries every new flavour on the board.</p>
+        <div class="actions"><a class="btn orange" href="#partner">Our story</a></div>
       </div>
-      <div class="soon">
-        <h3>Havelock</h3>
-        <span class="sep" aria-hidden="true"></span>
-        <span class="pill plain">Coming soon</span>
-        <img class="blend" src="/img/map.jpg" width="372" height="135" alt="">
+      <div class="duo">
+        <figure><img src="img/mo.jpg" width="338" height="396" alt="Illustration of Mo skateboarding"><figcaption><b>Mo</b><span>The Playful One</span></figcaption></figure>
+        <figure><img src="img/mona.jpg" width="419" height="374" alt="Illustration of Mona relaxing"><figcaption><b>Mona</b><span>The Cool One</span></figcaption></figure>
       </div>
     </div>
   </section>
 
-  <section class="band partner" id="partner">
+  <!-- 6. Promise -->
+  <section class="band promise" aria-labelledby="promise-h">
     <div class="wrap">
-      <h2 class="fat sec-title">Bring Momo to your town</h2>
-      <div class="grid">
-        <div class="ptile purple">
-          <h3>Open a Momo</h3>
-          <p>We're looking for franchise partners. A Momo comes with 10 scooping flavours, a display freezer, the full Momo look, and the House of Carmello factory behind you.</p>
-          <a class="tel" href="tel:+94112237999">011 2237 999</a>
+      <div class="seal" aria-hidden="true">House of<br>Carmello</div>
+      <h2 class="fat" id="promise-h">Made by the people behind Carmello.</h2>
+      <p>Every Momo scoop comes from the same Sri Lankan kitchen that makes Carmello ice cream, so you get premium taste at an easy, everyday price.</p>
+      <div class="actions"><a class="btn primary" href="#menu">Taste the menu</a></div>
+    </div>
+  </section>
+
+  <!-- 7 + 8. Newsletter and find us -->
+  <section class="wrap" id="find-us" aria-label="Stay in touch and find us">
+    <div class="duo-panels">
+      <div class="panel news-panel">
+        <span class="kicker">Hungry for more?</span>
+        <h2 class="fat">Get new flavours first.</h2>
+        <p style="font-weight:700">Be the first to hear about new flavours, the Havelock opening and parlour offers.</p>
+        <form class="signup" id="signup" novalidate>
+          <label for="email">Your email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+          <button class="btn light" type="submit">Subscribe</button>
+          <p class="msg" id="msg" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="panel find-panel">
+        <span class="kicker" style="color:var(--purple)">Find us near you</span>
+        <h2 class="fat">Visit Momo.</h2>
+        <div class="loc">
+          <div class="thumb"><img src="img/store.jpg" width="720" height="449" alt="Momo Ja-Ela parlour"></div>
+          <div><h3>Ja-Ela</h3><p>118C, Thudella Pamunugama Road, Ja-Ela</p><span class="pill">Now open</span></div>
         </div>
-        <div class="ptile orange">
-          <h3>Stock Momo in your shop</h3>
-          <p>Cups, tubs and pouches for your freezer, delivered across Ja-Ela, Gampaha, Wattala, Kadawatha and Negombo.</p>
-          <a class="tel" href="tel:+94112237999">011 2237 999</a>
+        <div class="loc">
+          <div class="thumb"><img src="img/havelock-sq.jpg" width="700" height="700" alt="Momo Havelock shopfront"></div>
+          <div><h3>Havelock</h3><p>Colombo</p><span class="pill">Coming soon</span></div>
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer>
+<footer id="partner">
   <div class="wrap">
-    <svg class="big" role="img" aria-label="momo"><use href="#logo-h-flat"/></svg>
-    <div class="meta">
-      <span>Momo by the House of Carmello</span>
-      <span>© 2026 NJC Foods</span>
+    <div class="top">
+      <div class="brand">
+        <svg role="img" aria-label="momo"><use href="#logo"/></svg>
+        <p>Momo by the House of Carmello. Scoops, shakes, sundaes and tubs in Sri Lanka.</p>
+      </div>
+      <div><h3>Explore</h3><ul><li><a href="#menu">Menu</a></li><li><a href="#tubs">Tubs</a></li><li><a href="#story">Our story</a></li><li><a href="#find-us">Visit</a></li></ul></div>
+      <div><h3>Partner with us</h3><ul><li><a href="franchise.html">Open a Momo (franchise)</a></li><li><a href="#partner">Stock Momo in your shop</a></li><li><a href="tel:+94112237999">011 2237 999</a></li></ul></div>
+      <div><h3>Order</h3><ul><li><a href="#find-us">Uber Eats</a></li><li><a href="#find-us">PickMe</a></li><li><a href="#find-us">Ja-Ela parlour</a></li></ul></div>
     </div>
+    <div class="legal"><span>© 2026 NJC Foods. All rights reserved.</span><span>Delivering to shops across Ja-Ela, Gampaha, Wattala, Kadawatha and Negombo.</span></div>
   </div>
 </footer>
 
 <script>
 (function () {
-  /* Edit the menu and prices here. */
-  var MENU = {
-    shakes: [["Vanilla Shake", 450], ["Strawberry Shake", 450], ["Mango Shake", 450], ["Chocolate Shake", 500], ["Cookie Shake", 550], ["Brownie Shake", 550]],
-    drinks: [["Fresh Lemonade", 250], ["Narang Strawberry", 280], ["Kiwi Iced Tea", 300], ["Thai Iced Tea", 400], ["Milo Dinosaur", 490], ["Matcha Milk", 540]],
-    sundaes: [["Mango & Passion Sundae", 550], ["Cookie & Cream Sundae", 550], ["Brownie & Cherry Sundae", 600]],
-    bites: [["Hotdog Bun", 250], ["Cashew Brownie", 300]],
-    cups: ["Choco & Cream", "Brownies & Fudge", "Milo", "Matcha", "Red Velvet Cookie", "Strawberry Matcha", "Blueberry Matcha", "Cookie Monster"]
-  };
-  var SIZES = ["80 ml", "500 ml", "1 L", "2 L", "4 L"];
-  var TUBS = [
-    { name: "Vanilla", img: 0, prices: [70, 320, 550, 1080, 1920] },
-    { name: "Strawberry", img: 1, prices: [70, 360, 560, 1100, 1920] },
-    { name: "Mango", img: 2, prices: [70, 360, 560, 1100, 1920] },
-    { name: "Choco", img: 3, prices: [80, 380, 600, 1180, 2200] },
-    { name: "Fruit & Nut", img: 4, prices: [100, 460, 850, 1690, 3100] }
-  ];
-  var IMG = "/img/";
   var $ = function (id) { return document.getElementById(id); };
   var rs = function (n) { return "Rs " + n.toLocaleString("en-US"); };
   var esc = function (s) { return s.replace(/&/g, "&amp;"); };
 
-  ["shakes", "drinks", "sundaes", "bites"].forEach(function (k) {
-    $("m-" + k).innerHTML = MENU[k].map(function (r) {
-      return "<li><span>" + esc(r[0]) + "</span><b>" + rs(r[1]) + "</b></li>";
-    }).join("");
+  /* Carousel: real horizontal slider with swipe, arrows, autoplay */
+  var track = $("slides"), hero = track.parentNode;
+  var slides = [].slice.call(track.children);
+  var dots = [].slice.call($("dots").children);
+  var cur = 0, timer = null;
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function show(i) {
+    cur = (i + slides.length) % slides.length;
+    track.style.transform = "translateX(" + (-100 * cur) + "%)";
+    slides.forEach(function (s, k) { s.inert = k !== cur; s.setAttribute("aria-hidden", String(k !== cur)); });
+    dots.forEach(function (d, k) { if (k === cur) d.setAttribute("data-on", ""); else d.removeAttribute("data-on"); });
+    $("count").textContent = (cur + 1) + " / " + slides.length;
+    $("controls").style.color = slides[cur].classList.contains("s-blush") ? "var(--ink)" : "#fff";
+  }
+  function stop() { clearInterval(timer); timer = null; }
+  function auto() { stop(); if (!reduce) timer = setInterval(function () { show(cur + 1); }, 6000); }
+  $("prev").addEventListener("click", function () { show(cur - 1); auto(); });
+  $("next").addEventListener("click", function () { show(cur + 1); auto(); });
+  hero.addEventListener("mouseenter", stop);
+  hero.addEventListener("mouseleave", auto);
+  hero.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") { show(cur - 1); auto(); }
+    if (e.key === "ArrowRight") { show(cur + 1); auto(); }
   });
-  $("m-cups").innerHTML = MENU.cups.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("");
+  var x0 = null, dx = 0, w = 1;
+  hero.addEventListener("pointerdown", function (e) {
+    if (e.target.closest("a, button") || (e.pointerType === "mouse" && e.button !== 0)) return;
+    x0 = e.clientX; dx = 0; w = hero.offsetWidth; track.classList.add("dragging"); stop();
+  });
+  window.addEventListener("pointermove", function (e) {
+    if (x0 === null) return;
+    dx = e.clientX - x0;
+    track.style.transform = "translateX(calc(" + (-100 * cur) + "% + " + dx + "px))";
+  });
+  function end() {
+    if (x0 === null) return;
+    track.classList.remove("dragging");
+    if (Math.abs(dx) > Math.min(80, w * .15)) show(cur + (dx < 0 ? 1 : -1)); else show(cur);
+    x0 = null; auto();
+  }
+  window.addEventListener("pointerup", end);
+  window.addEventListener("pointercancel", end);
+  document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else auto(); });
+  show(0); auto();
 
+  /* Menu data (parlour prices) */
+  var MENU = [
+    { cat: "Shake", img: "shake", bg: "bg-peach", items: [["Vanilla Shake", 450], ["Strawberry Shake", 450], ["Mango Shake", 450], ["Chocolate Shake", 500], ["Cookie Shake", 550], ["Brownie Shake", 550]] },
+    { cat: "Drink", img: "icedtea", bg: "bg-lilac", items: [["Fresh Lemonade", 250], ["Narang Strawberry", 280], ["Kiwi Iced Tea", 300], ["Thai Iced Tea", 400], ["Milo Dinosaur", 490], ["Matcha Milk", 540]] },
+    { cat: "Sundae", img: "sundae", bg: "bg-peach", items: [["Mango & Passion Sundae", 550], ["Cookie & Cream Sundae", 550], ["Brownie & Cherry Sundae", 600]] },
+    { cat: "Bite", img: "brownie", bg: "bg-lilac", items: [["Hotdog Bun", 250], ["Cashew Brownie", 300]] },
+    { cat: "Little cup", img: "cup", bg: "bg-peach", items: [["Little cup, any flavour", 400]] }
+  ];
+  var FAVS = [["Sundae", 2], ["Shake", 4], ["Drink", 3], ["Sundae", 0], ["Shake", 5], ["Drink", 4], ["Bite", 1], ["Little cup", 0], ["Sundae", 1], ["Drink", 5]];
+  function find(cat) { return MENU.filter(function (m) { return m.cat === cat; })[0]; }
+  $("track").innerHTML = FAVS.map(function (f) {
+    var m = find(f[0]), it = m.items[f[1]];
+    return '<article class="pcard"><div class="ph ' + m.bg + '"><img class="blend" src="img/' + m.img + '.jpg" alt="" loading="lazy"></div><div class="meta"><span class="kicker">' + m.cat + '</span><span class="price">' + rs(it[1]) + '</span></div><h3>' + esc(it[0]) + "</h3></article>";
+  }).join("");
+  $("tprev").addEventListener("click", function () { $("track").scrollBy({ left: -280, behavior: "smooth" }); });
+  $("tnext").addEventListener("click", function () { $("track").scrollBy({ left: 280, behavior: "smooth" }); });
+  $("fullList").innerHTML = MENU.map(function (m) {
+    return '<div class="ncard" style="padding:20px 22px"><span class="kicker" style="color:var(--purple)">' + m.cat + (m.cat === "Little cup" ? "" : "s") + '</span><ul style="margin-top:10px">' + m.items.map(function (it) {
+      return '<li style="display:flex;justify-content:space-between;gap:12px;padding-block:4px;font-weight:800"><span>' + esc(it[0]) + '</span><b style="font-weight:700;white-space:nowrap">' + rs(it[1]) + "</b></li>";
+    }).join("") + "</ul></div>";
+  }).join("");
+  $("fullBtn").addEventListener("click", function (e) {
+    e.preventDefault(); var f = $("full-menu"); f.hidden = !f.hidden;
+    this.textContent = f.hidden ? "Explore the full menu" : "Hide the full menu";
+  });
+
+  /* Spin to pair */
+  var treats = [].concat(find("Sundae").items.map(function (i) { return [i, "sundae"]; }), find("Shake").items.map(function (i) { return [i, "shake"]; }), find("Bite").items.map(function (i) { return [i, "brownie"]; }));
+  var drinks = find("Drink").items;
+  var spins = 0;
+  $("spin").addEventListener("click", function () {
+    var a = treats[Math.floor(Math.random() * treats.length)], b = drinks[Math.floor(Math.random() * drinks.length)];
+    spins++; $("spins").textContent = "Spins: " + spins;
+    ["reelA", "reelB"].forEach(function (id) { $(id).classList.add("spin"); });
+    setTimeout(function () {
+      $("imgA").src = "img/" + a[1] + ".jpg"; $("nmA").textContent = a[0][0]; $("prA").textContent = rs(a[0][1]);
+      $("nmB").textContent = b[0]; $("prB").textContent = rs(b[1]);
+      $("result").textContent = "Together: " + rs(a[0][1] + b[1]);
+      ["reelA", "reelB"].forEach(function (id) { $(id).classList.remove("spin"); });
+    }, reduce ? 0 : 280);
+  });
+
+  /* Tub picker */
+  var SIZES = ["80 ml", "500 ml", "1 L", "2 L", "4 L"];
+  /* null = price not set yet: shows "Ask us for the price" */
+  var TUBS = [["Vanilla", [70, 320, 550, 1080, 1920], "img/scoop0.jpg"], ["Strawberry", [70, 360, 560, 1100, 1920], "img/scoop1.jpg"], ["Mango", [70, 360, 560, 1100, 1920], "img/scoop2.jpg"], ["Choco", [80, 380, 600, 1180, 2200], "img/scoop3.jpg"], ["Fruit & Nut", [100, 460, 850, 1690, 3100], "img/scoop4.jpg"], ["Butterscotch", [null, null, null, null, null], ""]];
   var size = null, flav = null;
-  $("sizes").innerHTML = SIZES.map(function (s, i) {
-    return '<button type="button" class="size" id="s-' + i + '" data-i="' + i + '" aria-pressed="false">' + s + "</button>";
-  }).join("");
-  $("flavours").innerHTML = TUBS.map(function (t, i) {
-    return '<li><button type="button" class="flv" id="f-' + i + '" data-i="' + i + '" role="radio" aria-checked="false"><span class="dot"></span><img src="' + IMG + "scoop" + t.img + '.jpg" width="60" height="54" alt=""><span>' + esc(t.name) + '</span><span class="p" id="p-' + i + '"></span></button></li>';
-  }).join("");
-
+  $("sizes").innerHTML = SIZES.map(function (s, i) { return '<button type="button" class="size" id="s-' + i + '" data-i="' + i + '" aria-pressed="false">' + s + "</button>"; }).join("");
+  $("flvs").innerHTML = TUBS.map(function (t, i) { return '<button type="button" class="flv" id="f-' + i + '" data-i="' + i + '" role="radio" aria-checked="false">' + (t[2] ? '<img src="' + t[2] + '" alt="">' : '<span class="sw" aria-hidden="true"></span>') + esc(t[0]) + "</button>"; }).join("");
   function render() {
     SIZES.forEach(function (_, i) { $("s-" + i).setAttribute("aria-pressed", String(i === size)); });
-    TUBS.forEach(function (t, i) {
-      $("f-" + i).setAttribute("aria-checked", String(i === flav));
-      $("p-" + i).textContent = size === null ? "" : rs(t.prices[size]);
-    });
+    TUBS.forEach(function (_, i) { $("f-" + i).setAttribute("aria-checked", String(i === flav)); });
     var b = $("pick");
-    if (size === null) b.textContent = "Select a size";
-    else if (flav === null) b.textContent = "Pick a flavour";
-    else b.textContent = TUBS[flav].name + " " + SIZES[size] + " · " + rs(TUBS[flav].prices[size]);
+    var p = size !== null && flav !== null ? TUBS[flav][1][size] : null;
+    b.textContent = size === null ? "Select a size" : flav === null ? "Pick a flavour" : TUBS[flav][0] + " " + SIZES[size] + (p === null ? "" : " · " + rs(p));
+    $("tubnote").textContent = size !== null && flav !== null && p === null ? "Ask us for the price of this tub." : "";
   }
-  $("sizes").addEventListener("click", function (e) {
-    var t = e.target.closest(".size"); if (t) { size = +t.dataset.i; render(); }
-  });
-  $("flavours").addEventListener("click", function (e) {
-    var t = e.target.closest(".flv"); if (t) { flav = +t.dataset.i; render(); }
-  });
+  $("sizes").addEventListener("click", function (e) { var t = e.target.closest(".size"); if (t) { size = +t.dataset.i; render(); } });
+  $("flvs").addEventListener("click", function (e) { var t = e.target.closest(".flv"); if (t) { flav = +t.dataset.i; render(); } });
   $("pick").addEventListener("click", function (e) { if (size === null || flav === null) e.preventDefault(); });
   render();
+
+  /* Newsletter (sample only) */
+  $("signup").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = $("email").value.trim();
+    $("msg").textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "Thanks! Newsletter sign-ups open soon, so check back shortly." : "Enter an email address like you@example.com.";
+  });
 })();
 </script>
 
